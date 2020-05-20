@@ -5,4 +5,4 @@ $( document ).ready(function() {
   let redirect_uri = 'https://mujibsardar.github.io/spotify_jquery_only';
   const redirect = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
   window.location.replace(redirect);
-})
+});
