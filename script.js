@@ -1,4 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
-    
+    console.log( "script.js ready!" );
+
 });
