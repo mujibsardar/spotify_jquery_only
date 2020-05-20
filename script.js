@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-    console.log( "script.js ready!" );
-
+    console.log( 'script.js ready!' );
+    console.log('version 1')
     /////https://stackoverflow.com/questions/2988050/html5-audio-player-jquery-toggle-click-play-pause
     const getUrlParameter = (sParam) => {
       let sPageURL = window.location.search.substring(1),////substring will take everything after the https link and split the #/&
