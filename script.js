@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     console.log( 'script.js ready!' );
-    console.log('version 5')
+    console.log('version 6')
 
     const getUrlParameter = (sParam) => {
       let sPageURL = window.location.search.substring(1),////substring will take everything after the https link and split the #/&
