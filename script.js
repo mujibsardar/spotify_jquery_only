@@ -36,7 +36,7 @@ $( document ).ready(function() {
     $( "#search_button" ).click(function() {
       console.log("Button has been clicked with accessToken: " + accessToken);
       // Make Spotify API call
-      $.ajax ({
+      $.ajax({
         url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
         type: 'GET',
         headers: {
@@ -52,9 +52,8 @@ $( document ).ready(function() {
           let parent_div = $('#content');
           parent_div.append(iframe);
         }
-      });
-    });
-  });
+      }); // End of Spotify ajax call
+    }); // End of search button
 
-
+  }); // End of document.ready
 });
