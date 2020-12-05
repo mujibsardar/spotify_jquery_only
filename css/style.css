@@ -2,13 +2,18 @@ body{
     background-image: url("../img/spotify.jpg");
 }
 
+iframe {
+  border-radius: 30px;
+}
+
 .song {
-  position: absolute;
-  top: 70%; left: 30%;
+  /* position: absolute; */
+  /* 30% - 70%  AND 30% - 70% */
+  /* top: 70%; left: 30%;  */
 }
 .buscar-caja {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 30%; left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
   border-radius: 40px;

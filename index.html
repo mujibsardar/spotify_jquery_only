@@ -8,20 +8,35 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Loading our stylesheet -->
   <link href="css/style.css" rel="stylesheet" id="bootstrap-css">
 </head>
 
 <body>
+  <!-- Search Bar -->
   <div class="buscar-caja">
     <input type="text" name="" class="buscar-txt" placeholder="Search ....."/>
     <a class="buscar-btn" id="search_button"> <i class="fa fa-search"></i> </a>
   </div>
 
-  <div class="song" id="content"></div>
+  <!-- Load songs into here -->
+  <div class="container">
+    <div class="row">
+      <div id="song_0" class="col"></div>
+      <div id="song_1" class="col"></div>
+      <div id="song_2" class="col"></div>
+      <div class="w-100"></div>
+      <div id="song_3" class="col"></div>
+      <div id="song_4" class="col"></div>
+      <div id="song_5" class="col"></div>
+    </div>
+</div>
 
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Loading our JavaScript -->
   <script src="script.js" charset="utf-8"></script>
 </body>
 
