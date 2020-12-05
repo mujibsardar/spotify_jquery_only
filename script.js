@@ -56,4 +56,3 @@ $( document ).ready(function() {
     }); // End of search button
 
   }); // End of document.ready
-});
