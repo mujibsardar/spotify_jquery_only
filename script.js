@@ -65,10 +65,4 @@ $( document ).ready(function() {
         }
       }); // End of Spotify ajax call
     }); // End of search button
-
-    // YouTube Subscribe Stuff
-    $('*[id*=ytsubscribe]:visible').each(function() {
-      $(this).css({top: 85%, left: 85%, position:'absolute'});
-    });
-
   }); // End of document.ready
