@@ -16,7 +16,7 @@ iframe {
 /* Position Results Below Search Bar */
 #song-list {
   position: absolute;
-  top: 20%; left: 20%;
+  top: 20%; left: 25%;
 }
 .buscar-caja {
   position: absolute;

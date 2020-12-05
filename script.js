@@ -34,10 +34,12 @@ $( document ).ready(function() {
 
     // Search button has been clicked
     $( "#search_button" ).click(function() {
-      //
+      //Get the value of the search box
+      let search_query = encodeURIComponent()$('#search-text').val());
       // Make Spotify API call
+      // Note we are using the track API endpoint.
       $.ajax({
-        url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
+        url: `https://api.spotify.com/v1/search?q=${search_query}&type=track`,
         type: 'GET',
         headers: {
             'Authorization' : 'Bearer ' + accessToken
@@ -46,7 +48,7 @@ $( document ).ready(function() {
           // Load our songs from Spotify into our page (max number of songs = max_songs)
           let num_of_tracks = data.tracks.items.length;
           let count = 0;
-          const max_songs = 6;
+          const max_songs = 12;
           console.log("num_of_tracks: " + num_of_tracks);
           while(count < max_songs && count < num_of_tracks){
             // Extract the id of the FIRST song from the data object
