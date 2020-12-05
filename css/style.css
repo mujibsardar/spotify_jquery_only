@@ -6,10 +6,10 @@ iframe {
   border-radius: 30px;
 }
 
-.song {
-  /* position: absolute; */
+.song-list {
+  position: absolute;
   /* 30% - 70%  AND 30% - 70% */
-  /* top: 70%; left: 30%;  */
+  top: 70%; left: 50%;
 }
 .buscar-caja {
   position: absolute;
