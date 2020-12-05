@@ -46,6 +46,7 @@ $( document ).ready(function() {
             'Authorization' : 'Bearer ' + accessToken
         },
         success: function(data) {
+          console.log("data: " + JSON.stringify(data.tracks.items));
           // Load our songs from Spotify into our page (max number of songs = max_songs)
           let num_of_tracks = data.tracks.items.length;
           let count = 0;
