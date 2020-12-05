@@ -1,3 +1,4 @@
+// Document has been loaded
 $( document ).ready(function() {
      // Helper Function to Extract Access Token for URL
     const getUrlParameter = (sParam) => {
@@ -25,9 +26,9 @@ $( document ).ready(function() {
     // https://www.url-encode-decode.com/
     let redirect_uri = 'https%3A%2F%2Fmujibsardar.github.io%2Fspotify_jquery_only'; // GitHub Pages URL or whatever your public url to this app is
     // *************** END *************************
+
     const redirect = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
     // Don't authorize if we have an access token already
-    console.log("Access Token: " + accessToken);
     if(accessToken == null || accessToken == "" || accessToken == undefined){
       window.location.replace(redirect);
     }
@@ -38,7 +39,7 @@ $( document ).ready(function() {
       let raw_search_query = $('#search-text').val();
       let search_query = encodeURI(raw_search_query);
       // Make Spotify API call
-      // Note we are using the track API endpoint.
+      // Note: We are using the track API endpoint.
       $.ajax({
         url: `https://api.spotify.com/v1/search?q=${search_query}&type=track`,
         type: 'GET',
@@ -46,13 +47,11 @@ $( document ).ready(function() {
             'Authorization' : 'Bearer ' + accessToken
         },
         success: function(data) {
-          console.log("data: " + JSON.stringify(data.tracks.items));
-          // Load our songs from Spotify into our page (max number of songs = max_songs)
+          // Load our songs from Spotify into our page
           let num_of_tracks = data.tracks.items.length;
           let count = 0;
           // Max number of songs is 12
           const max_songs = 12;
-          console.log("num_of_tracks: " + num_of_tracks);
           while(count < max_songs && count < num_of_tracks){
             // Extract the id of the FIRST song from the data object
             let id = data.tracks.items[count].id;
@@ -63,8 +62,6 @@ $( document ).ready(function() {
             parent_div.html(iframe);
             count++;
           }
-
-
         }
       }); // End of Spotify ajax call
     }); // End of search button
