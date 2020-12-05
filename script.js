@@ -47,6 +47,7 @@ $( document ).ready(function() {
           let num_of_tracks = data.tracks.items.length;
           let count = 0;
           const max_songs = 6;
+          console.log("num_of_tracks: " + num_of_tracks);
           while(count < max_songs && count < num_of_tracks){
             // Extract the id of the FIRST song from the data object
             let id = data.tracks.items[count].id;
