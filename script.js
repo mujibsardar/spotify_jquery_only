@@ -50,6 +50,7 @@ $( document ).ready(function() {
           // Load our songs from Spotify into our page (max number of songs = max_songs)
           let num_of_tracks = data.tracks.items.length;
           let count = 0;
+          // Max number of songs is 12
           const max_songs = 12;
           console.log("num_of_tracks: " + num_of_tracks);
           while(count < max_songs && count < num_of_tracks){
@@ -59,7 +60,7 @@ $( document ).ready(function() {
             let src_str = `https://open.spotify.com/embed/track/${id}`;
             let iframe = `<div class='song'><iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;
             let parent_div = $('#song_'+ count);
-            parent_div.append(iframe);
+            parent_div.replaceWith(iframe);
             count++;
           }
 
