@@ -32,23 +32,27 @@ $( document ).ready(function() {
       window.location.replace(redirect);
     }
 
-    // Make Spotify API call
-    $.ajax ({
-      url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
-      type: 'GET',
-      headers: {
-          'Authorization' : 'Bearer ' + accessToken
-      },
-      success: function(data) {
-        // Extract the id of the FIRST song from the data object
-        let id = data.tracks.items[0].id;
-        // Constructing two different iframes to embed the song
-        let src_str = `https://open.spotify.com/embed/track/${id}`;
-        // Option 2
-        let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-        let parent_div = $('#content');
-        parent_div.append(iframe);
-      }
-  });
+    // Search button has been clicked
+    $( "#search_button" ).click(function() {
+      // Make Spotify API call
+      $.ajax ({
+        url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',
+        type: 'GET',
+        headers: {
+            'Authorization' : 'Bearer ' + accessToken
+        },
+        success: function(data) {
+          // Extract the id of the FIRST song from the data object
+          let id = data.tracks.items[0].id;
+          // Constructing two different iframes to embed the song
+          let src_str = `https://open.spotify.com/embed/track/${id}`;
+          // Option 2
+          let iframe = `<iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+          let parent_div = $('#content');
+          parent_div.append(iframe);
+        }
+      });
+    });
+
 
 });
