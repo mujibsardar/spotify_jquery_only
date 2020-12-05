@@ -35,7 +35,8 @@ $( document ).ready(function() {
     // Search button has been clicked
     $( "#search_button" ).click(function() {
       //Get the value of the search box
-      let search_query = encodeURIComponent($('#search-text').val());
+      let raw_search_query = $('#search-text').val();
+      let search_query = encodeURI(raw_search_query);
       // Make Spotify API call
       // Note we are using the track API endpoint.
       $.ajax({
