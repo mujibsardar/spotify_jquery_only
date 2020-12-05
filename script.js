@@ -34,7 +34,6 @@ $( document ).ready(function() {
 
     // Search button has been clicked
     $( "#search_button" ).click(function() {
-      console.log("Button has been clicked with accessToken: " + accessToken);
       // Make Spotify API call
       $.ajax({
         url: 'https://api.spotify.com/v1/search?q=dance+off&type=track',

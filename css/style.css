@@ -2,12 +2,10 @@ body{
     background-image: url("../img/spotify.jpg");
 }
 
-.song-info {
+.song {
   position: absolute;
-  top: 60%; left: 50%;
-  transform: translate(-50%, -50%);
+  top: 70%; left: 30%;
 }
-
 .buscar-caja {
   position: absolute;
   top: 50%; left: 50%;
@@ -25,7 +23,6 @@ body{
   background: white;
   color: black;
 }
-
 .buscar-btn {
 
   float: right;
@@ -57,7 +54,6 @@ body{
   width: 0px;
   font-weight: bold;
 }
-
 .btn-primary{
     background: #fff;
     color: #CB356B;
