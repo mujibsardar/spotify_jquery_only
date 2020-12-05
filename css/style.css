@@ -1,6 +1,6 @@
-#g-ytsubscribe {
+div[id*='ytsubscribe'] {
   position: absolute;
-  top: 0%; left: 0%;
+  top: 85%; left: 85%;
 }
 
 /* Have a Spotify Themed Background */
