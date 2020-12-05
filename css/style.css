@@ -1,19 +1,26 @@
+/* Have a Spotify Themed Background */
 body{
     background-image: url("../img/spotify.jpg");
 }
 
+/* Make Spotify Songs Look More Round */
 iframe {
   border-radius: 30px;
 }
 
-.song-list {
+/* Make the Spotify Results Fall Into the Same Row */
+.col {
+  display: inline-block !important;
+}
+
+/* Position Results Below Search Bar */
+#song-list {
   position: absolute;
-  /* 30% - 70%  AND 30% - 70% */
-  top: 70%; left: 50%;
+  top: 20%; left: 20%;
 }
 .buscar-caja {
   position: absolute;
-  top: 30%; left: 50%;
+  top: 10%; left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
   border-radius: 40px;
@@ -39,7 +46,7 @@ iframe {
   justify-content: center;
   align-items: center;
   transition: 0.4s;
-  color: white;
+  color: #1DB954;
   cursor: pointer;
 }
 .buscar-btn > i
