@@ -1,4 +1,4 @@
-# spotify_jquery_only
+# Spotify API using Only jQuery
 
 This is the codebase used in the following tutorial:
-https://www.youtube.com/watch?v=DpelsNigp7Y
+https://youtu.be/d0FFlTeyAY8
